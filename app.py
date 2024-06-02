@@ -1,5 +1,7 @@
 import streamlit as st
 
+from genres.page import show_genres
+
 
 def main():
 	st.title("Flix App")
@@ -9,12 +11,11 @@ def main():
 		['Home', 'Genre', 'Actors', 'Movies', 'Rate']
 	)
 
-
 	if menu_options == 'Home':
 		st.write('Welcome to Flix App')
 
 	if menu_options == 'Genre':
-		st.write('Genre')
+		show_genres()
 
 	if menu_options == 'Actors':
 		st.write('Actors')
@@ -24,6 +25,7 @@ def main():
 
 	if menu_options == 'Rate':
 		st.write('Rate')
+
 
 if __name__ == '__main__':
 	main()
