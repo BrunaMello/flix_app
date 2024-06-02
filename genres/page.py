@@ -1,4 +1,6 @@
+import pandas as pd
 import streamlit as st
+from st_aggrid import AgGrid
 
 genres = [
 	{'id': 1, 'name': 'Action'},
@@ -15,7 +17,11 @@ genres = [
 def show_genres():
 	st.write('Genres List:')
 
-	st.table(genres)
+	AgGrid(
+		data=pd.DataFrame(genres),
+		reload_data=True,
+		key='genres_grid',
+	)
 
 	st.title('Add a new genre')
 	name = st.text_input('Genre name')
