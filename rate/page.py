@@ -14,5 +14,4 @@ def show_rate():
 		reload_data=True,
 		key='genres_grid',
 		fit_columns_on_grid_load=True,
-		
 	)
