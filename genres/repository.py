@@ -7,12 +7,12 @@ from login.service import logout
 class GenreRepository:
 
 	def __init__(self):
-		self.__base_url = 'http://brunamello.pythonanywhere.com/api/v1/'
-		self.__genres_url = f'{self.__base_url}genre/'
+		self.__base_url = 'https://brunamello.pythonanywhere.com/api/v1/'
+		self.__genres_url = f'{self.__base_url}genres/'
 
 		# Set headers with token
 		self.__headers = {
-			'Authorization': f'Barer {st.session_state.token}'
+			'Authorization': f'Bearer {st.session_state.token}'
 		}
 
 	def get_genres(self):
