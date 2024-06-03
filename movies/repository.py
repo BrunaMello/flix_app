@@ -4,7 +4,7 @@ import streamlit as st
 from login.service import logout
 
 
-class MoviesRepository:
+class MovieRepository:
 
 	def __init__(self):
 		self.__base_url = 'https://brunamello.pythonanywhere.com/api/v1/'
