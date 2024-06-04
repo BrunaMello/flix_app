@@ -4,7 +4,7 @@ from actors.page import show_actors
 from genres.page import show_genres
 from login.page import show_login
 from movies.page import show_movies
-from rate.page import show_rate
+from reviews.page import show_rate
 
 
 def main():

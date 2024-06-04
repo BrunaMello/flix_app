@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from st_aggrid import AgGrid
 
-file_path = 'rate/rate.csv'
+file_path = 'reviews/reviews.csv'
 rate = pd.read_csv(file_path)
 
 
