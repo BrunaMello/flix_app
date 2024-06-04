@@ -1,7 +1,7 @@
 from reviews.repository import ReviewRepository
 
 
-class ReviewsService:
+class ReviewService:
 
 	def __init__(self):
 		self.reviews_repository = ReviewRepository()

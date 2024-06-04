@@ -30,7 +30,7 @@ def main():
 		if menu_options == 'Movies':
 			show_movies()
 
-		if menu_options == 'Rate':
+		if menu_options == 'Reviews':
 			show_rate()
 
 
