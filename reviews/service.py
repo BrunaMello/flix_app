@@ -1,3 +1,5 @@
+import streamlit as st
+
 from reviews.repository import ReviewRepository
 
 
@@ -7,7 +9,11 @@ class ReviewService:
 		self.reviews_repository = ReviewRepository()
 
 	def get_reviews(self):
-		return self.reviews_repository.get_reviews()
+		if 'reviews' in st.session_state:
+			return st.session_state.reviews
+		reviews = self.reviews_repository.get_reviews()
+		st.session_state.reviews = reviews
+		return reviews
 
 	def create_reviews(self, movie, stars, comment):
 		review = dict(
@@ -15,4 +21,6 @@ class ReviewService:
 			stars=stars,
 			comment=comment,
 		)
-		return self.reviews_repository.create_review(review)
+		new_review = self.reviews_repository.create_review(review)
+		st.session_state.reviews.append(new_review)
+		return new_review

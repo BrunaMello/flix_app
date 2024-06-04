@@ -5,7 +5,7 @@ from genres.page import show_genres
 from home.page import show_home
 from login.page import show_login
 from movies.page import show_movies
-from reviews.page import show_rate
+from reviews.page import show_review
 
 
 def main():
@@ -16,7 +16,7 @@ def main():
 
 		menu_options = st.sidebar.selectbox(
 			'Select one option',
-			['Home', 'Genre', 'Actors', 'Movies', 'Rate']
+			['Home', 'Genre', 'Actors', 'Movies', 'Reviews']
 		)
 
 		if menu_options == 'Home':
@@ -32,7 +32,7 @@ def main():
 			show_movies()
 
 		if menu_options == 'Reviews':
-			show_rate()
+			show_review()
 
 
 if __name__ == '__main__':

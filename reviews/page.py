@@ -6,7 +6,7 @@ from movies.service import MovieService
 from reviews.service import ReviewService
 
 
-def show_rate():
+def show_review():
 	review_service = ReviewService()
 	reviews = review_service.get_reviews()
 
